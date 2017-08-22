@@ -14,9 +14,21 @@ export class QuestionListComponent implements OnInit {
   ngOnInit() {
     // set properties
     this.questions = [
-      { text: 'Who is your favorite music artist?', answer: 'Bob Schneider' },
-      { text: 'What is the name of your favorite song?', answer: 'Hideaway' },
-      { text: 'What is the name of your second favorite song?', answer: '40 Dogs' }
+      {
+        text: 'Who is your favorite music artist?',
+        answer: 'Bob Schneider',
+        hide: true
+      },
+      {
+        text: 'What is the name of your favorite song?',
+        answer: 'Hideaway',
+        hide: true
+      },
+      {
+        text: 'What is the name of your second favorite song?',
+        answer: '40 Dogs',
+        hide: true
+      }
     ];
   }
 }

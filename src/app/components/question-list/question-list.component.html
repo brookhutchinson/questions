@@ -4,11 +4,11 @@
     <div class="card">
       <div class="card-header">
         <h5 class="card-title">
-          {{ question.text }}
+          {{ question.text }} <a class="btn btn-link" href="#" (click)="question.hide = !question.hide">Show</a>
         </h5><!-- /.card-title -->
       </div><!-- /.card-header -->
 
-      <div class="card-body">
+      <div class="card-body" [hidden]="question.hide">
         <p class="card-text">
           {{ question.answer }}
         </p><!-- /.card-text -->
