@@ -1,0 +1,20 @@
+<div class="container">
+  <!-- loop through each question inside "questions" property -->
+  <div class="question" *ngFor="let question of questions">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">
+          {{ question.text }}
+        </h5><!-- /.card-title -->
+      </div><!-- /.card-header -->
+
+      <div class="card-body">
+        <p class="card-text">
+          {{ question.answer }}
+        </p><!-- /.card-text -->
+      </div><!-- /.card-body -->
+    </div><!-- /.card -->
+
+    <br>
+  </div><!-- /.question -->
+</div><!-- /.container -->
