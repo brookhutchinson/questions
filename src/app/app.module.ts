@@ -9,13 +9,16 @@ import { AppComponent }          from './app.component';
 import { NavbarComponent }       from './components/navbar/navbar.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
 
+// services
+import { DataService }           from './services/data.service';
+
 @NgModule({
   // modules
   imports: [ BrowserModule, HttpModule, FormsModule ],
   // components
   declarations: [ AppComponent, NavbarComponent, QuestionListComponent ],
   // services
-  providers: [],
+  providers: [ DataService ],
   // bootstrap
   bootstrap: [ AppComponent ]
 })
