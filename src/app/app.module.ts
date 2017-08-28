@@ -8,6 +8,7 @@ import { FormsModule }           from '@angular/forms';
 import { AppComponent }          from './app.component';
 import { NavbarComponent }       from './components/navbar/navbar.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
+import { QuestionComponent }     from './components/question/question.component';
 
 // services
 import { DataService }           from './services/data.service';
@@ -16,7 +17,7 @@ import { DataService }           from './services/data.service';
   // modules
   imports: [ BrowserModule, HttpModule, FormsModule ],
   // components
-  declarations: [ AppComponent, NavbarComponent, QuestionListComponent ],
+  declarations: [ AppComponent, NavbarComponent, QuestionListComponent, QuestionComponent ],
   // services
   providers: [ DataService ],
   // bootstrap
