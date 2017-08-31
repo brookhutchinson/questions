@@ -22,4 +22,9 @@ export class QuestionListComponent implements OnInit {
     // use DataService to retrieve questions
     this.questions = this.dataService.getQuestions();
   }
+
+  addQuestion(question: Question) {
+    // use DataService to add question
+    this.dataService.addQuestion(question);
+  }
 }

@@ -34,4 +34,9 @@ export class DataService {
     // return questions
     return this.questions;
   }
+
+  addQuestion(question: Question) {
+    // add new question object to "questions"
+    this.questions.unshift(question);
+  }
 }

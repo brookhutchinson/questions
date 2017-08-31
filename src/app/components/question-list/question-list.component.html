@@ -1,2 +1,9 @@
+<!-- add question form -->
+<add-question (questionAdded)="addQuestion($event)"></add-question>
+
+<div class="container">
+  <hr>
+</div><!-- /.container -->
+
 <!-- loop through each question inside "questions" property -->
 <question *ngFor="let question of questions" [question]="question"></question>

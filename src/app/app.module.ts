@@ -9,6 +9,7 @@ import { AppComponent }          from './app.component';
 import { NavbarComponent }       from './components/navbar/navbar.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
 import { QuestionComponent }     from './components/question/question.component';
+import { AddQuestionComponent }  from './components/add-question/add-question.component';
 
 // services
 import { DataService }           from './services/data.service';
@@ -17,7 +18,7 @@ import { DataService }           from './services/data.service';
   // modules
   imports: [ BrowserModule, HttpModule, FormsModule ],
   // components
-  declarations: [ AppComponent, NavbarComponent, QuestionListComponent, QuestionComponent ],
+  declarations: [ AppComponent, NavbarComponent, QuestionListComponent, QuestionComponent, AddQuestionComponent ],
   // services
   providers: [ DataService ],
   // bootstrap

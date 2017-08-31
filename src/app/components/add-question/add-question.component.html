@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title">
+        Add New FAQ
+      </h5><!-- /.card-title -->
+    </div><!-- /.card-header -->
+
+    <div class="card-body">
+      <div class="card-text">
+        <form (submit)="addQuestion()">
+          <!-- question text -->
+          <div class="form-control">
+            <label for="text">Question Text</label>
+            <input class="form-control" type="text" name="text" [(ngModel)]="text">
+          </div><!-- /.form-control -->
+
+          <!-- question answer -->
+          <div class="form-control">
+            <label for="answer">Question Answer</label>
+            <input class="form-control" type="text" name="answer" [(ngModel)]="answer">
+          </div><!-- /.form-control -->
+
+          <div class="form-control">
+            <!-- form submit button -->
+            <input class="btn btn-primary" type="submit" value="Add">
+          </div>
+        </form>
+      </div><!-- /.card-text -->
+    </div><!-- /.card-body -->
+  </div><!-- /.card -->
+</div><!-- /.container -->
