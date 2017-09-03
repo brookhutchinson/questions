@@ -65,12 +65,13 @@ export class DataService {
 
   // remove question from Local Storage
   removeQuestion(question: Question) {
-    // loop through question objects inside questions property
     for (let i = 0; i < this.questions.length; i++) {
-      // check if selected question is the same question as the question interation
       if (question == this.questions[i]) {
-        // remove question from questions property
         this.questions.splice(i, 1);
+
+        // set Local Storage value to new updated array of objects
+        // the new updated array of objects value will not include the object that was removed from the array
+        localStorage.setItem( 'questions', JSON.stringify(this.questions) );
       }
     }
   }
