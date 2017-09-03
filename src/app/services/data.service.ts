@@ -9,28 +9,22 @@ export class DataService {
   // define properties
   public questions: Question[];
 
-  constructor() {
-    // set properties
-    this.questions = [
-      {
-        text: 'Who is your favorite music artist?',
-        answer: 'Bob Schneider',
-        hide: true
-      },
-      {
-        text: 'What is the name of your favorite song?',
-        answer: 'Hideaway',
-        hide: true
-      },
-      {
-        text: 'What is the name of your second favorite song?',
-        answer: '40 Dogs',
-        hide: true
-      }
-    ];
-  }
+  constructor() {}
 
   getQuestions() {
+    // check if value is stored inside Local Storage and then set questions property value
+    if (localStorage.getItem('questions') === null) {
+      // questions property is not stored inside Local Storage
+      // set "questions" property value equal to empty array
+      this.questions = [];
+
+    } else {
+      // questions property is stored inside Local Storage
+      // set questions property value equal to Local Storage questions property value
+      // convert the string value that is stored inside Local Storage into an object value
+      this.questions = JSON.parse(localStorage.getItem('questions'));
+    }
+
     // return questions
     return this.questions;
   }
