@@ -39,4 +39,15 @@ export class DataService {
     // add new question object to "questions"
     this.questions.unshift(question);
   }
+
+  removeQuestion(question: Question) {
+    // remove question from "questions" array of objects property
+    for (let i = 0; i < this.questions.length; i++) {
+      // check if current question is the same question as the question interation
+      if (question == this.questions[i]) {
+        // spice out that specific question from "questions" property array of objects
+        this.questions.splice(i, 1);
+      }
+    }
+  }
 }
